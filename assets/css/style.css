@@ -1,0 +1,30 @@
+.input-err{
+    border-color: red;
+    border-width: medium;
+}
+
+.input-sucess{
+    border-color: #00df13e2;
+    border-width: medium;
+}
+
+body{
+    background-image: url('../img/background.jpg');
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+
+.myimg{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.background{
+    background-color: white;
+}
+
+.text-color{
+    color:#0a3d67;
+}

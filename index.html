@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/barra-de-busqueda.png" type="image/x-icon">
+    <title>Curriculum Generador</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class='row'>
+            <div class="col-5 offset-3">
+                <div class="card mt-5 mb-5 border-0 rounded-4">
+                    <div class="card-header bg-black text-light">
+                        <h4 class="text-center">Registre sus datos</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h4 class="text-center">Complete toda la informacion</h4>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre:</label>
+                            <input type="text" class='form-control'  id="name">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="apellido" class="form-label">Apellido:</label>
+                            <input type="text" class='form-control' id="apellido">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="direccion" class="form-label">Direccion:</label>
+                            <input type="text" class='form-control' id="direccion">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo:</label>
+                            <input type="email" class='form-control' id="correo">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Telefono:</label>
+                            <input type="tel" class='form-control' id="telefono">
+                        </div>
+
+                        <label for="basic-url" class="form-label">Pagina Web:</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon3">https://example.com</span>
+                            <input type="text" class="form-control" id='web' aria-describedby="basic-addon3">
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="resumen" class="form-label">Resumen:</label>
+                            <input type="text" class='form-control' id="resumen">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="resumen" class="form-label">Idiomas:</label>
+                            <input type="text" class='form-control' placeholder="Escribe tus datos separado con ," id="idiomas">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="empleos" class="form-label">Empleos:</label>
+                            <input type="text" class='form-control' placeholder="Escribe tus datos separado con ," id="empleos">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="educacion" class="form-label">Educacion:</label>
+                            <input type="text" class='form-control'placeholder="Escribe tus datos separado con ,"  id="educacion">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="skill" class="form-label">Skill:</label>
+                            <input type="text" class='form-control' placeholder="Escribe tus datos separado con ," id="skill">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cert" class="form-label">Certificaciones:</label>
+                            <input type="text" class='form-control' placeholder="Escribe tus datos separado con ," id="cert">
+                        </div>
+
+
+                        <button onclick="crearCV()" class="btn float-end mt-4 btn-outline-primary" href="">Generar
+                            CV</button>
+
+                        <button onclick="limpiar()" class="btn float-end mt-4 btn-warning mx-2" href="">Limpiar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container mb-5" id='curriculum-generado'>
+
+            <!--Borrador de diseño de bootstrap para hacerlo con el js en el dom-->
+           <!--<div class="row">
+                <div class="col-md-4 text-center py-5 background">
+                    <p class="text-uppercase fs-4 fw-bold pb-5 text-color" style="font-weight: 900;">Geraldo antonio
+                        ventura de los santos</p>
+                    <img class="img-fluid myimg mb-5" src="/assets/img/default-user-image.png" alt="">
+
+                    <div class="container">
+                        <h2 class="text-start text-color">Contacto</h2>
+                        <hr>
+                        <h4 class="text-start">Direccion:</h4>
+                        <p class="text-start mb-5">Direcction ingresada</p>
+
+                        <h4 class="text-start">Correo Electronico:</h4>
+                        <p class="text-start mb-5">Direcction ingresada</p>
+
+                        <h4 class="text-start">Telefono:</h4>
+                        <p class="text-start mb-5">Direcction ingresada</p>
+
+                        <h4 class="text-start">Web:</h4>
+                        <p class="text-start mb-5">Direcction ingresada</p>
+                    </div>
+
+                    <div class="container mb-5">
+                        <h2 class="text-start text-color">Idiomas</h2>
+                        <hr>
+                            <li class="text-start mx-3">Ingles</li>
+                            <li class="text-start mx-3">frances</li>
+                            <li class="text-start mx-3">otro mas que no se</li>
+                    </div>
+                </div> -->
+
+                <!--Segunda columna-->
+
+                <!--<div class="col-md-8 py-xl-5 background">
+
+                    <div class="container mb-5 mt-5">
+                        <h2 class="text-start text-color">Resumen</h2>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sunt libero totam delectus
+                            omnis eligendi nulla voluptatem dolore nemo at vitae quisquam ipsa ad animi eveniet iure
+                            autem, cupiditate minima! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
+                            omnis ullam labore. Debitis enim saepe, dicta aspernatur eum esse beatae accusantium
+                            corporis, voluptatum culpa pariatur perferendis eveniet! Amet, beatae explicabo!</p>
+                    </div>
+
+                    <div class="container mb-5">
+                        <h2 class="text-start text-color">Empleos</h2>
+                        <hr>
+                        <li class="text-start mx-3">Esto es un empleo</li>
+                        <li class="text-start mx-3">Esto es un empleo</li>
+                        <li class="text-start mx-3">Esto es un empleo</li>
+                    </div>
+
+                    <div class="container mb-5">
+                        <h2 class="text-start text-color">Educacion</h2>
+                        <hr>
+                        <li class="text-start mx-3" >Esto es un empleo</li>
+                        <li class="text-start mx-3">Esto es un empleo</li>
+                        <li class="text-start mx-3">Esto es un empleo</li>
+                    </div>
+
+                    <div class="container mb-5">
+                        <h2 class="text-start text-color">Skill</h2>
+                        <hr>
+                        <li class="text-start mx-3" >Esto es un empleo</li>
+                        <li class="text-start mx-3">Esto es un empleo</li>
+                        <li class="text-start mx-3">Esto es un empleo</li>
+                    </div>
+
+                    <div class="container mb-5">
+                        <h2 class="text-start text-color">Certificaciones</h2>
+                        <hr>
+                        <li class="text-start mx-3" >Esto es un empleo</li>
+                        <li class="text-start mx-3">Esto es un empleo</li>
+                        <li class="text-start mx-3">Esto es un empleo</li>
+                    </div>
+                </div>
+            </div>
+
+        </div>-->
+    </div>
+
+    <script src="./assets/js/site/index.js"></script>
+</body>
+
+</html>
